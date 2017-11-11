@@ -27,7 +27,6 @@ $(document).ready(function () {
     var dwpt_data = [dwpt_near, dwpt_midway, dwpt_far];
 
     Plotly.plot(dwpt, dwpt_data, {
-        title: ' membership functions',
         margin: {
             t: 50
         }
@@ -55,7 +54,6 @@ $(document).ready(function () {
     var dobs_data = [dobs_near, dobs_midway, dobs_far];
 
     Plotly.plot(dobs, dobs_data, {
-        title: 'd_obs membership functions',
         margin: {
             t: 50
         }
@@ -83,7 +81,6 @@ $(document).ready(function () {
     var aobs_data = [aobs_small, aobs_moderate, aobs_big];
 
     Plotly.plot(aobs, aobs_data, {
-        title: 'a_obs membership functions',
         margin: {
             t: 50
         }
@@ -111,7 +108,6 @@ $(document).ready(function () {
     var awptobs_data = [awptobs_small, awptobs_moderate, awptobs_big];
 
     Plotly.plot(awptobs, awptobs_data, {
-        title: 'a_wpt-obs membership functions',
         margin: {
             t: 50
         }
@@ -151,7 +147,6 @@ $(document).ready(function () {
     var bo_data = [bo_verylow, bo_low, bo_moderate, bo_high, bo_veryhigh];
 
     Plotly.plot(bo, bo_data, {
-        title: 'beta o membership functions',
         margin: {
             t: 50
         }
