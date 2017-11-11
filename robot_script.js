@@ -154,7 +154,10 @@ function init() {
 function createWaypoint(event) {
     if (!draw) {
         var X = event.clientX,
-            Y = event.clientY;
+            Y = event.clientY - document.getElementById("top").offsetHeight - 20 + $(document).scrollTop();
+
+        console.log($(document).scrollTop());
+
         if (!isAnyBox) {
             isAnyBox = true;
         } else {
