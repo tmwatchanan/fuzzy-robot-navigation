@@ -187,8 +187,6 @@ function highlight_bw() {
                         document.getElementById("bwAobs[" + aobsid + "]-" + awpt_obs).style.backgroundColor = "#ffa";
 
                         document.getElementById("bwAwpt_obs[" + awpt_obsid + "]-" + aobs).style.backgroundColor = "#ffa";
-
-                        console.log(ruleid, dobsid, aobsid, awpt_obs, awpt_obsid, aobs)
                     }
                 }
             }

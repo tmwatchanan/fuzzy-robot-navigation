@@ -158,7 +158,7 @@ function createWaypoint(event) {
         if (!isAnyBox) {
             isAnyBox = true;
         } else {
-            Composite.remove(world, box)
+            Composite.remove(world, box);
         }
         box = Bodies.rectangle(X, Y, 10, 10, {
             label: 'box'

@@ -24,10 +24,12 @@ $(document).ready(function () {
 
     // Selection frame (playground :D)
     $("#YDR-Frame").mousedown(function (e) {
-        selection = true;
-        // store mouseX and mouseY
-        x1 = e.pageX - this.offsetLeft;
-        y1 = e.pageY - this.offsetTop;
+        if (draw) {
+            selection = true;
+            // store mouseX and mouseY
+            x1 = e.pageX - this.offsetLeft;
+            y1 = e.pageY - this.offsetTop;
+        }
     });
 
     // If selection is true (mousedown on selection frame) the mousemove 
@@ -59,9 +61,6 @@ $(document).ready(function () {
                     height: HEIGHT
                 });
                 $("#selection").show();
-
-                // Info output
-                $('#status2').html('( x1 : ' + x1 + ' )  ( x2 : ' + x2 + ' )  ( y1 : ' + y1 + '  )  ( y2 : ' + y2 + ' ) ');
             }
         }
     });
@@ -90,7 +89,13 @@ $(document).ready(function () {
         selection = false;
     });
 
-    $("button").click(function () {
+    $("#draw").click(function () {
         draw = !draw;
+        if (draw) document.getElementById("draw").innerHTML = "Cancle";
+        else document.getElementById("draw").innerHTML = "Create Obstacle";
+    });
+
+    $("#reset").click(function () {
+        location.reload();
     });
 });
