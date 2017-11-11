@@ -14,13 +14,13 @@ $(document).ready(function () {
 
     var dwpt_midway = {
         x: [0, 2.0, 3.5, 5.0],
-        y: [0, 0, 1, 0],
+        y: [null, 0, 1, 0],
         name: 'Midway'
     };
 
     var dwpt_far = {
         x: [0, 3.5, 5.0, 7.0],
-        y: [0, 0, 1, 1],
+        y: [null, 0, 1, 1],
         name: 'Far'
     };
 
@@ -42,13 +42,13 @@ $(document).ready(function () {
 
     var dobs_midway = {
         x: [0, 0.4, 0.7, 1.0],
-        y: [0, 0, 1, 0],
+        y: [null, 0, 1, 0],
         name: 'Midway'
     };
 
     var dobs_far = {
         x: [0, 0.7, 1.0, 1.2],
-        y: [0, 0, 1, 1],
+        y: [null, 0, 1, 1],
         name: 'Far'
     };
 
@@ -70,13 +70,13 @@ $(document).ready(function () {
 
     var aobs_moderate = {
         x: [0, 60, 90, 130],
-        y: [0, 0, 1, 0],
+        y: [null, 0, 1, 0],
         name: 'Moderate'
     };
 
     var aobs_big = {
         x: [0, 90, 130, 180],
-        y: [0, 0, 1, 1],
+        y: [null, 0, 1, 1],
         name: 'Big'
     };
 
@@ -98,13 +98,13 @@ $(document).ready(function () {
 
     var awptobs_moderate = {
         x: [0, 30, 60, 90],
-        y: [0, 0, 1, 0],
+        y: [null, 0, 1, 0],
         name: 'Moderate'
     };
 
     var awptobs_big = {
         x: [0, 60, 90, 180],
-        y: [0, 0, 1, 1],
+        y: [null, 0, 1, 1],
         name: 'Big'
     };
 
@@ -132,19 +132,19 @@ $(document).ready(function () {
 
     var bo_moderate = {
         x: [0, 0.25, 0.5, 0.75],
-        y: [0, 0, 1, 0],
+        y: [null, 0, 1, 0],
         name: 'Moderate'
     };
 
     var bo_high = {
         x: [0, 0.5, 0.75, 1.0],
-        y: [0, 0, 1, 0],
+        y: [null, 0, 1, 0],
         name: 'High'
     };
 
     var bo_veryhigh = {
         x: [0, 0.75, 1.0],
-        y: [0, 0, 1],
+        y: [null, 0, 1],
         name: 'Very High'
     };
 

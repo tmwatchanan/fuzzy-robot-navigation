@@ -17,33 +17,55 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="./highlight.js"></script>
+    <style>
+        .tg td {
+            padding: 0;
+        }
 
+        table {
+            float: left;
+            margin: 5px;
+        }
+    </style>
 
 </head>
 
 <body onload="init()">
 
-<header class="bs-docs-nav navbar navbar-static-top" id="top">
-    <div class="container">
-      <div class="navbar-header">
-        <button aria-controls="bs-navbar" aria-expanded="false" class="collapsed navbar-toggle" data-target="#bs-navbar" data-toggle="collapse" type="button"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> <a href="index.html" class="navbar-brand">Home</a> </div>
-      <nav class="collapse navbar-collapse" id="bs-navbar">
-        <ul class="nav navbar-nav">
-          <li> <a href="robot_navigation.html">Demo</a>
-          </li>
-          <li> <a href="membership-functions.html">Membership Functions</a>
-          </li>
-          <li> <a href="fuzzy-rules.html">Fuzzy Rules</a>
-          </li>
+    <header class="bs-docs-nav navbar navbar-static-top" id="top">
+        <div class="container">
+            <div class="navbar-header">
+                <button aria-controls="bs-navbar" aria-expanded="false" class="collapsed navbar-toggle" data-target="#bs-navbar" data-toggle="collapse"
+                    type="button">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="index.html" class="navbar-brand">Home</a>
+            </div>
+            <nav class="collapse navbar-collapse" id="bs-navbar">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="robot_navigation.html">Demo</a>
+                    </li>
+                    <li>
+                        <a href="membership-functions.html">Membership Functions</a>
+                    </li>
+                    <li>
+                        <a href="fuzzy-rules.html">Fuzzy Rules</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#aboutModal" data-toggle="modal" data-target="#myModal">About</a>
+                    </li>
+                    </center>
+        </div>
         </ul>
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="#aboutModal" data-toggle="modal" data-target="#myModal">About</a></li>
-		</center>
-    </div>
-        </ul>
-      </nav>
-    </div>
-  </header>
+        </nav>
+        </div>
+    </header>
     <div class="container-fluid" style="padding: 0;">
         <div class="col-md-5">
             <div onmousedown="return false" id="YDR-Frame" class="frame">
@@ -56,7 +78,7 @@
         </div>
         <div class="col-md-7">
             <div class="row">
-                <div class="tabcontent col-md-6">
+                <div class="tabcontent">
                     <table id="bt" class="tg">
                         <tr>
                             <th class="tg-yw4l" colspan="2">Bt</th>
@@ -135,7 +157,7 @@
                         </tr>
                     </table>
                 </div>
-                <div class="tabcontent col">
+                <div class="tabcontent">
                     <table id="bwd" class="tg">
                         <tr>
                             <th class="tg-yw4l" colspan="2">Bwd</th>
@@ -215,7 +237,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="tabcontent col-md-7">
+                <div class="tabcontent">
                     <table id="bw" class="tg">
                         <tr>
                             <th class="tg-yw4l" colspan="2">Bw</th>
@@ -294,7 +316,7 @@
                     </table>
                 </div>
 
-                <div class="tabcontent col-md-4">
+                <div class="tabcontent">
                     <table id="bo" class="tg">
                         <tr>
                             <th class="tg-yw4l" colspan="1">Bo</th>
@@ -349,10 +371,13 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+        crossorigin="anonymous"></script>
     <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>   
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="./js/ie10-viewport-bug-workaround.js"></script>
 </body>
