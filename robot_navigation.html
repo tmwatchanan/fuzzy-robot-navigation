@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fuzzy Logic : Vacumm Cleanner</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.16/p5.min.js"></script>
+    <script src="./matter.js"></script>
+    <script src="./robot_script.js"></script>
+    <script src="./FuzzyLogic.js"></script>
+    <link rel="stylesheet" href="./style.css" text="text/css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+    <script src="./create_obstacle.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="./highlight.js"></script>
+
+
+</head>
+
+<body onload="init()">
+    <div class="container-fluid" style="padding: 0;">
+        <div class="col-sm-3">
+            <div onmousedown="return false" id="YDR-Frame" class="frame">
+
+                <div id="selection" class="selectiondiv"></div>
+                <div id="container" onclick="createWaypoint(event)"></div>
+            </div>
+            <p id="status2"></p>
+            <button>kuy</button>
+        </div>
+        <div class="col-sm-9">
+            <div class="row">
+                <div class="tabcontent col-sm-5">
+                    <table id="bt" class="tg">
+                        <tr>
+                            <th class="tg-yw4l" colspan="2">Input
+                                <br>
+                            </th>
+                            <th class="tg-yw4l" colspan="3">d_wpt
+                                <br>
+                                <br>
+                            </th>
+                        </tr>
+                        <tr>
+                            <td class="tg-yw4l">d_obs</td>
+                            <td class="tg-yw4l">a_wpt_obs
+                                <br>
+                            </td>
+                            <td id="btDwpt[near]" class="tg-yw4l">Near</td>
+                            <td id="btDwpt[mid]" class="tg-yw4l">Midway</td>
+                            <td id="btDwpt[far]" class="tg-yw4l">Far</td>
+                        </tr>
+                        <tr>
+                            <td id="btDobs[near]-1" class="tg-yw4l">Near</td>
+                            <td id="btAwpt_obs[small]-1" class="tg-yw4l">Small
+                                <br>
+                            </td>
+                            <td id="btrule-11" class="tg-yw4l">High</td>
+                            <td id="btrule-12" class="tg-yw4l">Moderate</td>
+                            <td id="btrule-13" class="tg-yw4l">Low
+                                <br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td id="btDobs[near]-2" class="tg-yw4l">Near</td>
+                            <td id="btAwpt_obs[moderate]-1" class="tg-yw4l">Moderate</td>
+                            <td id="btrule-21" class="tg-yw4l">Moderate</td>
+                            <td id="btrule-22" class="tg-yw4l">Low</td>
+                            <td id="btrule-23" class="tg-yw4l">Very Low
+                                <br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td id="btDobs[near]-3" class="tg-yw4l">Near</td>
+                            <td id="btAwpt_obs[big]-1" class="tg-yw4l">Big</td>
+                            <td id="btrule-31" class="tg-yw4l">Low</td>
+                            <td id="btrule-32" class="tg-yw4l">Very Low
+                                <br>
+                            </td>
+                            <td id="btrule-33" class="tg-yw4l">Very Very Low
+                                <br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td id="btDobs[mid]-1" class="tg-yw4l">Midway</td>
+                            <td id="btAwpt_obs[small]-2" class="tg-yw4l">Small</td>
+                            <td id="btrule-41" class="tg-yw4l">Very High
+                                <br>
+                            </td>
+                            <td id="btrule-42" class="tg-yw4l">High</td>
+                            <td id="btrule-43" class="tg-yw4l">Moderate</td>
+                        </tr>
+                        <tr>
+                            <td id="btDobs[mid]-2" class="tg-yw4l">Midway</td>
+                            <td id="btAwpt_obs[moderate]-2" class="tg-yw4l">Moderate</td>
+                            <td id="btrule-51" class="tg-yw4l">High
+                                <br>
+                            </td>
+                            <td id="btrule-52" class="tg-yw4l">Moderate</td>
+                            <td id="btrule-53" class="tg-yw4l">Low</td>
+                        </tr>
+                        <tr>
+                            <td id="btDobs[mid]-3" class="tg-yw4l">Midway</td>
+                            <td id="btAwpt_obs[big]-2" class="tg-yw4l">Big</td>
+                            <td id="btrule-61" class="tg-yw4l">Moderate</td>
+                            <td id="btrule-62" class="tg-yw4l">Low</td>
+                            <td id="btrule-63" class="tg-yw4l">Very Low
+                                <br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td id="btDobs[far]-1" class="tg-yw4l">Far</td>
+                            <td id="btAwpt_obs[small]-3" class="tg-yw4l">Small</td>
+                            <td id="btrule-71" class="tg-yw4l">Very Very High
+                                <br>
+                            </td>
+                            <td id="btrule-72" class="tg-yw4l">Very High
+                                <br>
+                            </td>
+                            <td id="btrule-73" class="tg-yw4l">High</td>
+                        </tr>
+                        <tr>
+                            <td id="btDobs[far]-2" class="tg-yw4l">Far</td>
+                            <td id="btAwpt_obs[moderate]-3" class="tg-yw4l">Moderate</td>
+                            <td id="btrule-81" class="tg-yw4l">Very High
+                                <br>
+                            </td>
+                            <td id="btrule-82" class="tg-yw4l">High</td>
+                            <td id="btrule-83" class="tg-yw4l">Moderate</td>
+                        </tr>
+                        <tr>
+                            <td id="btDobs[far]-3" class="tg-yw4l">Far</td>
+                            <td id="btAwpt_obs[big]-3" class="tg-yw4l">Big</td>
+                            <td id="btrule-91" class="tg-yw4l">High</td>
+                            <td id="btrule-92" class="tg-yw4l">Moderate</td>
+                            <td id="btrule-93" class="tg-yw4l">Low</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="tabcontent col-sm-5">
+                    <table id="bo" class="tg">
+                        <tr>
+                            <th class="tg-yw4l" colspan="2">Input
+                                <br>
+                            </th>
+                            <th class="tg-yw4l" colspan="2">d_obs
+                                <br>
+                            </th>
+                        </tr>
+                        <tr>
+                            <td class="tg-yw4l">a_obs</td>
+                            <td id="boDobs[near]" class="tg-yw4l">Near
+                                <br>
+                            </td>
+                            <td id="boDobs[mid]" class="tg-yw4l">Midway</td>
+                            <td id="boDobs[far]" class="tg-yw4l">Far</td>
+                        </tr>
+                        <tr>
+                            <td id="boAobs[small]" class="tg-yw4l">Small</td>
+                            <td id="borule-11" class="tg-yw4l">Moderate</td>
+                            <td id="borule-12" class="tg-yw4l">Low</td>
+                            <td id="borule-13" class="tg-yw4l">Very Low
+                                <br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td id="boAobs[moderate]" class="tg-yw4l">Moderate</td>
+                            <td id="borule-21" class="tg-yw4l">High</td>
+                            <td id="borule-22" class="tg-yw4l">Moderate</td>
+                            <td id="borule-23" class="tg-yw4l">Low</td>
+                        </tr>
+                        <tr>
+                            <td id="boAobs[big]" class="tg-yw4l">Big</td>
+                            <td id="borule-31" class="tg-yw4l">Very High
+                                <br>
+                            </td>
+                            <td id="borule-32" class="tg-yw4l">High</td>
+                            <td id="borule-33" class="tg-yw4l">Moderate</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="row">
+                <div class="tabcontent col-sm-5">
+                    <table id="bw" class="tg">
+                        <tr>
+                            <th class="tg-yw4l" colspan="2">Input
+                                <br>
+                            </th>
+                            <th class="tg-yw4l" colspan="3">d_obs
+                                <br>
+                                <br>
+                            </th>
+                        </tr>
+                        <tr>
+                            <td class="tg-yw4l">a_obs</td>
+                            <td class="tg-yw4l">a_wpt_obs
+                                <br>
+                            </td>
+                            <td class="tg-yw4l">Near</td>
+                            <td class="tg-yw4l">Midway</td>
+                            <td class="tg-yw4l">Far</td>
+                        </tr>
+                        <tr>
+                            <td class="tg-yw4l">Small</td>
+                            <td class="tg-yw4l">Small
+                                <br>
+                            </td>
+                            <td class="tg-yw4l">Low</td>
+                            <td class="tg-yw4l">Very Low
+                                <br>
+                            </td>
+                            <td class="tg-yw4l">Very Very Low
+                                <br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tg-yw4l">Small</td>
+                            <td class="tg-yw4l">Moderate</td>
+                            <td class="tg-yw4l">Low</td>
+                            <td class="tg-yw4l">Low</td>
+                            <td class="tg-yw4l">Very Low
+                                <br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tg-yw4l">Small</td>
+                            <td class="tg-yw4l">Big</td>
+                            <td class="tg-yw4l">Moderate</td>
+                            <td class="tg-yw4l">Low</td>
+                            <td class="tg-yw4l">Low</td>
+                        </tr>
+                        <tr>
+                            <td class="tg-yw4l">Moderate</td>
+                            <td class="tg-yw4l">Small</td>
+                            <td class="tg-yw4l">Low</td>
+                            <td class="tg-yw4l">Very Low
+                                <br>
+                            </td>
+                            <td class="tg-yw4l">Very Very Low
+                                <br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tg-yw4l">Moderate</td>
+                            <td class="tg-yw4l">Moderate</td>
+                            <td class="tg-yw4l">Moderate</td>
+                            <td class="tg-yw4l">Low</td>
+                            <td class="tg-yw4l">Very Low
+                                <br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tg-yw4l">Moderate</td>
+                            <td class="tg-yw4l">Big</td>
+                            <td class="tg-yw4l">Very High
+                                <br>
+                            </td>
+                            <td class="tg-yw4l">Very High
+                                <br>
+                            </td>
+                            <td class="tg-yw4l">Moderate</td>
+                        </tr>
+                        <tr>
+                            <td class="tg-yw4l">Big</td>
+                            <td class="tg-yw4l">Small</td>
+                            <td class="tg-yw4l">High</td>
+                            <td class="tg-yw4l">Moderate</td>
+                            <td class="tg-yw4l">Very Low
+                                <br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tg-yw4l">Big
+                                <br>
+                            </td>
+                            <td class="tg-yw4l">Moderate</td>
+                            <td class="tg-yw4l">High
+                                <br>
+                            </td>
+                            <td class="tg-yw4l">Moderate</td>
+                            <td class="tg-yw4l">Low</td>
+                        </tr>
+                        <tr>
+                            <td class="tg-yw4l">Big</td>
+                            <td class="tg-yw4l">Big</td>
+                            <td class="tg-yw4l">Very Very High
+                                <br>
+                            </td>
+                            <td class="tg-yw4l">Very Very High
+                                <br>
+                            </td>
+                            <td class="tg-yw4l">Moderate</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="tabcontent col-sm-5">
+                    <table id="bwd" class="tg">
+                        <tr>
+                            <th class="tg-yw4l" colspan="2">Input
+                                <br>
+                            </th>
+                            <th class="tg-yw4l" colspan="3">d_wpt
+                                <br>
+                                <br>
+                            </th>
+                        </tr>
+                        <tr>
+                            <td class="tg-yw4l">d_obs</td>
+                            <td class="tg-yw4l">a_wpt_obs
+                                <br>
+                            </td>
+                            <td class="tg-yw4l">Near</td>
+                            <td class="tg-yw4l">Midway</td>
+                            <td class="tg-yw4l">Far</td>
+                        </tr>
+                        <tr>
+                            <td class="tg-yw4l">Near</td>
+                            <td class="tg-yw4l">Small
+                                <br>
+                            </td>
+                            <td class="tg-yw4l">High</td>
+                            <td class="tg-yw4l">Moderate</td>
+                            <td class="tg-yw4l">Low
+                                <br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tg-yw4l">Near</td>
+                            <td class="tg-yw4l">Moderate</td>
+                            <td class="tg-yw4l">Very High
+                                <br>
+                            </td>
+                            <td class="tg-yw4l">High</td>
+                            <td class="tg-yw4l">Moderate</td>
+                        </tr>
+                        <tr>
+                            <td class="tg-yw4l">Near</td>
+                            <td class="tg-yw4l">Big</td>
+                            <td class="tg-yw4l">Very Very High
+                                <br>
+                            </td>
+                            <td class="tg-yw4l">Very High
+                                <br>
+                            </td>
+                            <td class="tg-yw4l">High
+                                <br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tg-yw4l">Midway</td>
+                            <td class="tg-yw4l">Small</td>
+                            <td class="tg-yw4l">Moderate</td>
+                            <td class="tg-yw4l">Low</td>
+                            <td class="tg-yw4l">Very Low
+                                <br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tg-yw4l">Midway</td>
+                            <td class="tg-yw4l">Moderate</td>
+                            <td class="tg-yw4l">High
+                                <br>
+                            </td>
+                            <td class="tg-yw4l">Moderate</td>
+                            <td class="tg-yw4l">Low</td>
+                        </tr>
+                        <tr>
+                            <td class="tg-yw4l">Midway</td>
+                            <td class="tg-yw4l">Big</td>
+                            <td class="tg-yw4l">Very High
+                                <br>
+                            </td>
+                            <td class="tg-yw4l">High</td>
+                            <td class="tg-yw4l">Moderate</td>
+                        </tr>
+                        <tr>
+                            <td class="tg-yw4l">Far</td>
+                            <td class="tg-yw4l">Small</td>
+                            <td class="tg-yw4l">Low</td>
+                            <td class="tg-yw4l">Very Low
+                                <br>
+                            </td>
+                            <td class="tg-yw4l">Very Very Low
+                                <br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tg-yw4l">Far</td>
+                            <td class="tg-yw4l">Moderate</td>
+                            <td class="tg-yw4l">Moderate</td>
+                            <td class="tg-yw4l">Low</td>
+                            <td class="tg-yw4l">Very Low
+                                <br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tg-yw4l">Far</td>
+                            <td class="tg-yw4l">Big</td>
+                            <td class="tg-yw4l">High</td>
+                            <td class="tg-yw4l">Moderate</td>
+                            <td class="tg-yw4l">Low</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <div>
+        <p id="disWpt"></p>
+        <p id="disObs"></p>
+        <p id="degRo"></p>
+        <p id="degWay"></p>
+        <p id="degObs"></p>
+    </div> -->
+
+    <script>
+        function openBetaTable(evt, tableName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tableName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+    </script>
+</body>
+
+</html>
