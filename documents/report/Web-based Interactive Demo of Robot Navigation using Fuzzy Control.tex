@@ -1,0 +1,138 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% LaTeX Example: Project Report
+%
+% Source: http://www.howtotex.com
+%
+% Feel free to distribute this example, but please keep the referral
+% to howtotex.com
+% Date: March 2011 
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% How to use writeLaTeX: 
+%
+% You edit the source code here on the left, and the preview on the
+% right shows you the result within a few seconds.
+%
+% Bookmark this page and share the URL with your co-authors. They can
+% edit at the same time!
+%
+% You can upload figures, bibliographies, custom classes and
+% styles using the files menu.
+%
+% If you're new to LaTeX, the wikibook is a great place to start:
+% http://en.wikibooks.org/wiki/LaTeX
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Edit the title below to update the display in My Documents
+%\title{Project Report}
+%
+%%% Preamble
+\documentclass[paper=a4, fontsize=11pt]{scrartcl}
+\usepackage[T1]{fontenc}
+\usepackage{times}
+
+\usepackage[english]{babel}															% English language/hyphenation
+\usepackage[protrusion=true,expansion=true]{microtype}	
+\usepackage{amsmath,amsfonts,amsthm} % Math packages
+\usepackage[pdftex]{graphicx}	
+\usepackage{url}
+
+
+%%% Custom sectioning
+\usepackage{sectsty}
+\allsectionsfont{\normalfont\scshape}
+
+
+%%% Custom headers/footers (fancyhdr package)
+\usepackage{fancyhdr}
+\pagestyle{fancyplain}
+\fancyhead{}											% No page header
+\fancyfoot[L]{}											% Empty 
+\fancyfoot[C]{}											% Empty
+\fancyfoot[R]{\thepage}									% Pagenumbering
+\renewcommand{\headrulewidth}{0pt}			% Remove header underlines
+\renewcommand{\footrulewidth}{0pt}				% Remove footer underlines
+\setlength{\headheight}{13.6pt}
+
+
+%%% Equation and float numbering
+\numberwithin{equation}{section}		% Equationnumbering: section.eq#
+\numberwithin{figure}{section}			% Figurenumbering: section.fig#
+\numberwithin{table}{section}				% Tablenumbering: section.tab#
+
+
+%%% Maketitle metadata
+\newcommand{\horrule}[1]{\rule{\linewidth}{#1}} 	% Horizontal rule
+
+\title{
+	%\vspace{-1in} 	
+	\usefont{OT1}{bch}{b}{n}
+	\normalfont \normalsize \textsc{IEEE CIS Student Competition 2017-Edition: \\ "Telling a Story: How your Computational Intelligence Research benefits Society and Humanity"} \\ [25pt]
+	\horrule{0.5pt} \\[0.4cm]
+	\huge Web-based Interactive Demo of Robot Navigation using Fuzzy Control \\
+	\horrule{2pt} \\[0cm]
+}
+%\author{
+%	\normalfont 								\normalsize
+%	Watchanan Chantapakul\\[-3pt]		\normalsize
+%	\today
+%}
+%\date{November 11, 2017}
+\date{}
+
+%%% Begin document
+\begin{document}
+	\maketitle
+	
+	\section{Project Information}
+	
+%	\subsection{Student Information}
+	\begin{itemize}
+		\item Name of Student: \textbf{Watchanan Chantapakul}
+		\item Education Institution:\textbf{Chiang Mai University}
+		\item Supervisor: \textbf{Sansanee Auephanwiriyakul}
+		\item Start and End Date: \textbf{October 26\textsuperscript{th}} -- \textbf{November 11\textsuperscript{th}, 2017}
+		\item Type of Artefact: \textbf{Interactive Tutorial / Demo}
+	\end{itemize}
+	
+%	\subsection{Artefact Information}	
+	
+	
+	\section{Brief Summary}
+	Computational Intelligence (CI) is the study of adaptive mechanisms to enable or facilitate intelligence behavior in complex and changing environments [1]. CI, a sub-branch of Artificial Intelligence (AI), already has a wide-ranging impact on our lives in these days. Fuzzy Systems is one of the five main paradigms of CI which is interesting one. It have been used and applied to control systems, fault diagnosis, clustering and pattern recognition [1, 5].
+	\linebreak \linebreak
+	In this project a web-based interactive demo which focuses on simulating how a real-life application of fuzzy sets theory is introduced. Fuzzy control can be implemented and used to be solutions in solving real-world problems. The robot navigation was chosen as an example to simulate how human beings can apply fuzzy sets theory in this scenario. With self-control of the robot, we can easily specify a destination for it. The robot manipulates itself by walking to the waypoint we input. Thus, we will see that CI algorithms will have computational adaptivity and fault tolerance [1].
+	\linebreak \linebreak
+	A specific task of the robot is achieving its input destination. However, it needs to face a number of various situations which have a different environment conditions. In order to deal with these, it should have multiple concurrent processes from all available sensor data. In this work, the end-to-end processes have been designed from scratch. Fuzzy rules and membership functions from [3] are mainly used for the navigation part. After applying fuzzy rules, the actual output for the robot is the velocity and adjusted angle of it is then calculated with the idea from [2] and fine-tuned.
+	\linebreak \linebreak
+	Web-based interactive demo of robot navigation using fuzzy control was created with web-based technology. To the point, it can be used to open up education around the world from anywhere, anytime and any device. This project is implemented internally in mainly HTML and JavaScript, with helps from JavaScript libraries --- \textit{jQuery}, \textit{Matter.js} and \textit{plotly.js}.
+	
+	
+	\begin{thebibliography}{9}
+		
+		\bibitem{latexcompanion}
+		A. P. Engelbrecht. \textit{Computational Intelligence: An Introduction}, John Wiley \& Sons, Ltd., West Sussex, England, 2007.
+		
+		\bibitem{latexcompanion}
+		Huq, R., Mann, G.K.I., Gosine, R.G.: \textit{Mobile Robot Navigation using Motor Schema and Fuzzy Context Dependent Behavior Modulation}. J. Applied Soft Computing 8(1), 422-436 (2008).
+		
+		\bibitem{latexcompanion} 
+		Panus Nattharith. 
+		\textit{Fuzzy logic based control of mobile robot navigation: A case study on iRobot Roomba Platform}. Scientific Research and Essays Vol, 8(2), 82-94 (2013).
+		
+		\bibitem{latexcompanion} 
+		Sansanee Auephanwiriyakul. 
+		\textit{Advanced Topics in Computer Engineering I (Fuzzy Set Theory)}. Chiang Mai University, 2004.
+		
+		\bibitem{latexcompanion} 
+		Sansanee Auephanwiriyakul. 
+		\textit{Introduction to Computational Intelligence}. Chiang Mai University, 2013.
+		
+%		\bibitem{knuthwebsite} 
+%		Knuth: Computers and Typesetting,
+%		\\\texttt{http://www-cs-faculty.stanford.edu/\~{}uno/abcde.html}
+	\end{thebibliography}
+	
+	
+	%%% End document
+\end{document}
