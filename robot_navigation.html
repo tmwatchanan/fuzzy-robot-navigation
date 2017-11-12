@@ -11,7 +11,8 @@
     <script src="./js/robot_script.js"></script>
     <script src="./js/FuzzyLogic.js"></script>
     <link rel="stylesheet" href="./css/style.css" text="text/css">
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
     <script src="./js/create_obstacle.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -62,10 +63,8 @@
                     <li>
                         <a href="#aboutModal" data-toggle="modal" data-target="#myModal">About</a>
                     </li>
-                    </center>
-        </div>
-        </ul>
-        </nav>
+                </ul>
+            </nav>
         </div>
     </header>
     <div class="container-fluid" style="padding: 0;">
@@ -78,18 +77,25 @@
             <button id="draw">Create Obstacle</button>
             <button id="reset">Reset</button>
         </div>
-        <div class="col-md-7">
+        <div class="col-md-6 pull-right">
             <div class="row">
                 <div class="tabcontent">
                     <table id="bt" class="tg">
                         <tr>
-                            <th class="tg-yw4l" colspan="2"><b>Bt</b></th>
-                            <th class="tg-yw4l" colspan="3"><b>d_wpt</b>
+                            <th class="tg-yw4l" colspan="2">
+                                <b>Bt</b>
+                            </th>
+                            <th class="tg-yw4l" colspan="3">
+                                <b>d_wpt</b>
                             </th>
                         </tr>
                         <tr>
-                            <td class="tg-yw4l"><b>d_obs</b></td>
-                            <td class="tg-yw4l"><b>a_wpt_obs</b></td>
+                            <td class="tg-yw4l">
+                                <b>d_obs</b>
+                            </td>
+                            <td class="tg-yw4l">
+                                <b>a_wpt_obs</b>
+                            </td>
                             <td id="btDwpt[near]" class="tg-yw4l">Near</td>
                             <td id="btDwpt[mid]" class="tg-yw4l">Midway</td>
                             <td id="btDwpt[far]" class="tg-yw4l">Far</td>
@@ -162,12 +168,20 @@
                 <div class="tabcontent">
                     <table id="bwd" class="tg">
                         <tr>
-                            <th class="tg-yw4l" colspan="2"><b>Bwd</b></th>
-                            <th class="tg-yw4l" colspan="3"><b>d_wpt</b></th>
+                            <th class="tg-yw4l" colspan="2">
+                                <b>Bwd</b>
+                            </th>
+                            <th class="tg-yw4l" colspan="3">
+                                <b>d_wpt</b>
+                            </th>
                         </tr>
                         <tr>
-                            <td class="tg-yw4l"><b>d_obs</b></td>
-                            <td class="tg-yw4l"><b>a_wpt_obs</b></td>
+                            <td class="tg-yw4l">
+                                <b>d_obs</b>
+                            </td>
+                            <td class="tg-yw4l">
+                                <b>a_wpt_obs</b>
+                            </td>
                             <td id="bwdDwpt[near]" class="tg-yw4l">Near</td>
                             <td id="bwdDwpt[mid]" class="tg-yw4l">Midway</td>
                             <td id="bwdDwpt[far]" class="tg-yw4l">Far</td>
@@ -242,12 +256,20 @@
                 <div class="tabcontent">
                     <table id="bw" class="tg">
                         <tr>
-                            <th class="tg-yw4l" colspan="2"><b>Bw</b></th>
-                            <th class="tg-yw4l" colspan="3"><b>d_obs</b></th>
+                            <th class="tg-yw4l" colspan="2">
+                                <b>Bw</b>
+                            </th>
+                            <th class="tg-yw4l" colspan="3">
+                                <b>d_obs</b>
+                            </th>
                         </tr>
                         <tr>
-                            <td class="tg-yw4l"><b>a_obs</b></td>
-                            <td class="tg-yw4l"><b>a_wpt_obs</b></td>
+                            <td class="tg-yw4l">
+                                <b>a_obs</b>
+                            </td>
+                            <td class="tg-yw4l">
+                                <b>a_wpt_obs</b>
+                            </td>
                             <td id="bwDobs[near]" class="tg-yw4l">Near</td>
                             <td id="bwDobs[mid]" class="tg-yw4l">Midway</td>
                             <td id="bwDobs[far]" class="tg-yw4l">Far</td>
@@ -321,11 +343,17 @@
                 <div class="tabcontent">
                     <table id="bo" class="tg">
                         <tr>
-                            <th class="tg-yw4l" colspan="1"><b>Bo</b></th>
-                            <th class="tg-yw4l" colspan="3"><b>d_obs</b></th>
+                            <th class="tg-yw4l" colspan="1">
+                                <b>Bo</b>
+                            </th>
+                            <th class="tg-yw4l" colspan="3">
+                                <b>d_obs</b>
+                            </th>
                         </tr>
                         <tr>
-                            <td class="tg-yw4l"><b>a_obs</b></td>
+                            <td class="tg-yw4l">
+                                <b>a_obs</b>
+                            </td>
                             <td id="boDobs[near]" class="tg-yw4l">Near</td>
                             <td id="boDobs[mid]" class="tg-yw4l">Midway</td>
                             <td id="boDobs[far]" class="tg-yw4l">Far</td>
