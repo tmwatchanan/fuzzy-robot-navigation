@@ -1,147 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="../../favicon.ico">
 
-    <title>Membership Functions | Web-based Interactive Demo of Robot Navigation using Fuzzy Control</title>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="../../favicon.ico">
 
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <!-- Optional theme -->
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"> -->
-    <!-- Custom styles for this template -->
-    <link href="./css/sticky-footer-navbar.css" rel="stylesheet">
-  </head>
+  <title>Membership Functions | Web-based Interactive Demo of Robot Navigation using Fuzzy Control</title>
 
-  <body>
-<header class="bs-docs-nav navbar navbar-static-top" id="top">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous">
+  <!-- Optional theme -->
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"> -->
+  <!-- Custom styles for this template -->
+  <link href="./css/sticky-footer-navbar.css" rel="stylesheet">
+</head>
+
+<body>
+  <header class="bs-docs-nav navbar navbar-static-top" id="top">
     <div class="container">
       <div class="navbar-header">
-        <button aria-controls="bs-navbar" aria-expanded="false" class="collapsed navbar-toggle" data-target="#bs-navbar" data-toggle="collapse" type="button"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> <a href="index.html" class="navbar-brand">Home</a> </div>
+        <button aria-controls="bs-navbar" aria-expanded="false" class="collapsed navbar-toggle" data-target="#bs-navbar" data-toggle="collapse"
+          type="button">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a href="index.html" class="navbar-brand">Home</a>
+      </div>
       <nav class="collapse navbar-collapse" id="bs-navbar">
         <ul class="nav navbar-nav">
-          <li> <a href="robot_navigation.html">Demo</a>
+          <li>
+            <a href="robot_navigation.html">Demo</a>
           </li>
-          <li> <a href="membership-functions.html">Membership Functions</a>
+          <li>
+            <a href="membership-functions.html">Membership Functions</a>
           </li>
-          <li> <a href="fuzzy-rules.html">Fuzzy Rules</a>
+          <li>
+            <a href="fuzzy-rules.html">Fuzzy Rules</a>
           </li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="#aboutModal" data-toggle="modal" data-target="#myModal">About</a></li>
-		</center>
+          <li>
+            <a href="#aboutModal" data-toggle="modal" data-target="#myModal">About</a>
+          </li>
+          </center>
     </div>
-        </ul>
-      </nav>
+    </ul>
+    </nav>
     </div>
   </header>
 
-    <!-- Begin page content -->
-    <div class="span3 well">
-        <center>
-          <h1 style="text-align: center;"><small>Take a look at</small><br>Membership Functions</h1>
-        <!-- <h3>asdasd</h3>
+  <!-- Begin page content -->
+  <div class="span3 well">
+    <center>
+      <h1 style="text-align: center;">
+        <small>Take a look at</small>
+        <br>Membership Functions</h1>
+      <!-- <h3>asdasd</h3>
         <em>asdasd</em> -->
-      </center>
-    </div>
+    </center>
+  </div>
 
+  <div class="container">
+    <p>5 inputs</p>
+    <p>4 outputs</p>
+    <hr>
+    <div style="text-align: center;">
+      <img src="http://latex.codecogs.com/gif.latex?d_{wpt}" border="0" />
+      <div id="dwpt" style="height:300px;"></div>
+    </div>
+    <hr>
+    <div style="text-align: center;">
+      <img src="http://latex.codecogs.com/gif.latex?d_{obs}" border="0" />
+      <div id="dobs" style="height:300px;"></div>
+    </div>
+    <hr>
+    <div style="text-align: center;">
+      <img src="http://latex.codecogs.com/gif.latex?\delta_{obs}" border="0" />
+      <div id="aobs" style="height:300px;"></div>
+    </div>
+    <hr>
+    <div style="text-align: center;">
+      <img src="http://latex.codecogs.com/gif.latex?\delta_{wpt-obs}" border="0" />
+      <div id="awptobs" style="height:300px;"></div>
+    </div>
+    <hr>
+    <div style="text-align: center;">
+      <img src="http://latex.codecogs.com/gif.latex?\beta_{o}" border="0" />
+      <div id="bo" style="height:300px;"></div>
+    </div>
+    <hr>
+    <div style="text-align: center;">
+      <img src="http://latex.codecogs.com/gif.latex?\beta_{t}" border="0" /> ,
+      <img src="http://latex.codecogs.com/gif.latex?\beta_{w}" border="0" /> and
+      <img src="http://latex.codecogs.com/gif.latex?\beta_{wd}" border="0" />
+      <div id="b" style="height:300px;"></div>
+    </div>
+    <hr>
+    <div class="mt-3">
+      <p>test</p>
+    </div>
+    <br>
+    <p class="lead"> with
+      <code>padding-top: 60px;</code> on the
+      <code>body &gt; .container</code>.</p>
+    <p></p>
+  </div>
+
+
+  <footer class="footer">
     <div class="container">
-      <p>5 inputs</p>
-      <p>4 outputs</p>
-      <hr>
-      <div style="text-align: center;">
-        <img src="http://latex.codecogs.com/gif.latex?d_{wpt}" border="0"/>
-        <div id="dwpt" style="height:300px;"></div>
-      </div>
-      <hr>
-      <div style="text-align: center;">
-        <img src="http://latex.codecogs.com/gif.latex?d_{obs}" border="0"/>
-        <div id="dobs" style="height:300px;"></div>
-      </div>
-      <hr>
-      <div style="text-align: center;">
-        <img src="http://latex.codecogs.com/gif.latex?\delta_{obs}" border="0"/>
-        <div id="aobs" style="height:300px;"></div>
-      </div>
-      <hr>
-      <div style="text-align: center;">
-        <img src="http://latex.codecogs.com/gif.latex?\delta_{wpt-obs}" border="0"/>
-        <div id="awptobs" style="height:300px;"></div>
-      </div>
-      <hr>
-      <div style="text-align: center;">
-        <img src="http://latex.codecogs.com/gif.latex?\beta_{o}" border="0"/>
-        <div id="bo" style="height:300px;"></div>
-      </div>
-      <hr>
-      <div class="mt-3">
-        <p>test</p>
-      </div>
-      <br>
-      <p class="lead"> with <code>padding-top: 60px;</code> on the <code>body &gt; .container</code>.</p>
-      <p></p>
+      <span class="text-muted">IEEE CIS Student Competition 2017-Edition: "Telling a Story: How your Computational Intelligence Research benefits
+        Society and Humanity".</span>
     </div>
-
-
-    <footer class="footer">
-      <div class="container">
-        <span class="text-muted">IEEE CIS Student Competition 2017-Edition: "Telling a Story: How your Computational Intelligence Research benefits Society and Humanity".</span>
-      </div>
-    </footer>
+  </footer>
 
   <!-- Modal -->
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
-                    <h4 class="modal-title" id="myModalLabel">Author</h4>
-                    </div>
-                <div class="modal-body">
-                    <center>
-                    <img src="./img/Watchanan.jpg" name="aboutme" width="140" height="140" border="0" class="img-circle"></a>
-                    <h3 class="media-heading">Watchanan Chantapakul <small>Thailand</small></h3>
-                    <h5 class="media-heading">Computer Engineering, Faculty of Engineering, <small>Chiang Mai University</small></h5>
-                    <span><strong>Skills: </strong></span>
-                        <span class="label label-warning">Computational Intelligence</span>
-                        <span class="label label-info">Computer Vision</span>
-                        <span class="label label-info">Project Management</span>
-                        <span class="label label-success">Lifelong Learning</span>
-                    </center>
-                    <hr>
-                    <center>
-                    <p class="text-left"><strong>Bio: </strong><br>
-                        He is a computer engineering student.</p>
-                    <br>
-                    </center>
-                </div>
-                <div class="modal-footer">
-                    <center>
-                    <button type="button" class="btn btn-default" data-dismiss="modal">tmwatchanan{at}gmail.com</button>
-                    </center>
-                </div>
-            </div>
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+          <h4 class="modal-title" id="myModalLabel">Author</h4>
         </div>
+        <div class="modal-body">
+          <center>
+            <img src="./img/Watchanan.jpg" name="aboutme" width="140" height="140" border="0" class="img-circle">
+            </a>
+            <h3 class="media-heading">Watchanan Chantapakul
+              <small>Thailand</small>
+            </h3>
+            <h5 class="media-heading">Computer Engineering, Faculty of Engineering,
+              <small>Chiang Mai University</small>
+            </h5>
+            <span>
+              <strong>Skills: </strong>
+            </span>
+            <span class="label label-warning">Computational Intelligence</span>
+            <span class="label label-info">Computer Vision</span>
+            <span class="label label-info">Project Management</span>
+            <span class="label label-success">Lifelong Learning</span>
+          </center>
+          <hr>
+          <center>
+            <p class="text-left">
+              <strong>Bio: </strong>
+              <br> He is a computer engineering student.</p>
+            <br>
+          </center>
+        </div>
+        <div class="modal-footer">
+          <center>
+            <button type="button" class="btn btn-default" data-dismiss="modal">tmwatchanan{at}gmail.com</button>
+          </center>
+        </div>
+      </div>
     </div>
+  </div>
 
 
-    <!-- Bootstrap core JavaScript
+  <!-- Bootstrap core JavaScript
     ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>   
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="./js/ie10-viewport-bug-workaround.js"></script>
-    
-    <!-- Plot -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
-    <script src="https://d14fo0winaifog.cloudfront.net/plotly-basic.js"></script>
-    <script src="./js/membership-functions-plot.js"></script>
-  </body>
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+    crossorigin="anonymous"></script>
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+    crossorigin="anonymous"></script>
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <script src="./js/ie10-viewport-bug-workaround.js"></script>
+
+  <!-- Plot -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
+  <script src="https://d14fo0winaifog.cloudfront.net/plotly-basic.js"></script>
+  <script src="./js/membership-functions-plot.js"></script>
+</body>
+
 </html>
