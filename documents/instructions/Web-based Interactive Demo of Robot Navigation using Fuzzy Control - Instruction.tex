@@ -107,15 +107,29 @@
 	
 	\section{Instruction}
 	Firstly, you needs to open \href{http://tmwatchanan.github.io/fuzzy-robot-navigation}{the url of online demo} mentioned above with your browser. You will see the home page, which shows summarized details about this project and content. The navigation bar placed on the top of every pages makes the user navigate through each different page. It includes links to \textit{(1) Home} \textit{(2) Demo} \textit{(3) Membership Functions}, and \textit{(4) About}. For the last one, after clicking the button, a dialog will be popped up to shows author's information.
-	\linebreak \linebreak
-	Robot navigation simulation is included on the left side of \textit{Demo page}. On the right side on this page, fuzzy rules are also displayed in form of tables. They are grouped into four tables in according to its output. You can play with the robot inside the square canvas provided in size $600 \times 600$ pixels. 
+	\\\\
+	Robot navigation simulation is included on the left side of \textit{Demo page}. On the right side on this page, fuzzy rules are also displayed in form of tables. They are grouped into four tables in according to its output. You can play with the robot inside the square canvas provided in size $600 \times 600$ pixels. Clicking any where inside it will mark the waypoint for the robot. The robot then will find the ways it can move to reach its marked destination. Along the path of the robot, if there is any fuzzy rule that fire in according to inputs, fuzzy rule in that cell will inform you that it is now active by changing color from white into yellow. In addition, you can also create your own obstacles by clicking the \textit{Create Obstacle} button and drag the rectangle to mark how a new obstacle will be placed. After finishing creation of obstacles, you must click the same button again but this time it will be shown as \textit{Create Waypoint} label to back to the default mode which enables you to send the destination to it again. \textit{Reset button} is located below the canvas, so you can click it in order to reset all inputs or fix some unexpected mistakes.
+	\\\\
+	Membership functions of both inputs and outputs are visualized interactively inside the \textit{Membership Functions} page. When you reach this page, you will see the information about what are the inputs that robot takes in order to process. Each membership function used to map each point in input space to a membership value between 0 and 1. All of membership functions are plotted in form of line graphs. With help of JavaScript you can hover your mouse in the different positions inside each plot then a pair of input value and membership value associated with it will be shown up interactively.
 	
-	\begin{thebibliography}{9}
-		\bibitem{knuthwebsite} 
-		Knuth: Computers and Typesetting,
-		\\\texttt{http://www-cs-faculty.stanford.edu/\~{}uno/abcde.html}
-	\end{thebibliography}
-	
+	\section{Summarized Steps}
+	\begin{enumerate}
+		\item Go to url: \url{https://tmwatchanan.github.io/fuzzy-robot-navigation}
+		\item Navigate to \href{https://tmwatchanan.github.io/fuzzy-robot-navigation/membership-functions.html}{\textit{Membership Functions page}}, each membership function is plotted. Hovering over different locations makes you see value of it clearer.
+		\item Navigate to \href{https://tmwatchanan.github.io/fuzzy-robot-navigation/robot_navigation.html}{\textit{Demo page}}
+			\begin{enumerate}
+				\item On the left side, play with the robot by clicking inside the canvas to mark a waypoint for it.
+				\item On the right side, at the same time with robot working, information about fuzzy rules will be shown and dynamically change the color that indicate which rule is fired. Also how the fired fuzzy sets look like are displayed there.
+			\end{enumerate}
+		\item Click on \textit{About link} makes you see author's detail.
+	\end{enumerate}
+
+	\section{Note}
+	\begin{itemize}
+		\item All pages were tested just only in \textit{Google Chrome} and \textit{Mozilla Firefox}. Other browsers may have some conflicts.
+		\item There are still have some buggy processes of the robot that make it cannot reach its destination sometimes.
+		\item Any comments or suggestions that will help this work to be better or reduce defects would be appreciated.
+	\end{itemize}
 	
 	%%% End document
 \end{document}
