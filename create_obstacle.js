@@ -28,7 +28,7 @@ $(document).ready(function () {
             selection = true;
             // store mouseX and mouseY
             x1 = e.pageX - this.offsetLeft;
-            y1 = e.pageY - this.offsetTop;
+            y1 = e.pageY - this.offsetTop - document.getElementById("top").offsetHeight - 20;
         }
     });
 
@@ -38,7 +38,7 @@ $(document).ready(function () {
         if (selection) {
             // Store current mouseposition
             x2 = e.pageX - this.offsetLeft;
-            y2 = e.pageY - this.offsetTop;
+            y2 = e.pageY - this.offsetTop - document.getElementById("top").offsetHeight - 20;
 
             // Prevent the selection div to get outside of your frame
             (x2 < 0) ? selection = false: ($(this).width() < x2) ? selection = false : (y2 < 0) ? selection = false : ($(this).height() < y2) ? selection = false : selection = true;;
@@ -91,7 +91,7 @@ $(document).ready(function () {
 
     $("#draw").click(function () {
         draw = !draw;
-        if (draw) document.getElementById("draw").innerHTML = "Cancle";
+        if (draw) document.getElementById("draw").innerHTML = "Create Waypoint";
         else document.getElementById("draw").innerHTML = "Create Obstacle";
     });
 

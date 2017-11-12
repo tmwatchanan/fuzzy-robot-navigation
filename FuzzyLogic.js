@@ -32,18 +32,18 @@ function distance_to_waypoint_far(Dwpt) {
 
 //Distance to obstacle
 function distance_to_obstacle_near(Dobs) {
-    if (0 <= Dobs && Dobs <= 0.4 * 1.2) return 1;
-    else if (Dobs <= 0.7 * 1.2) return (0.7 * 1.2 - Dobs) / 0.3 * 1.2;
+    if (0 <= Dobs && Dobs <= 0.4 * 2) return 1;
+    else if (Dobs <= 0.7 * 2) return (0.7 * 2 - Dobs) / 0.3 * 2;
     else return 0;
 }
 
 function distance_to_obstacle_mid(Dobs) {
-    if (0.4 * 1.2 <= Dobs && Dobs <= 0.7 * 1.2) return 1 - Math.abs(Dobs - 0.7 * 1.2) / 0.3 * 1.2;
+    if (0.4 * 2 <= Dobs && Dobs <= 0.7 * 2) return 1 - Math.abs(Dobs - 0.7 * 2) / 0.3 * 2;
     else return 0;
 }
 
 function distance_to_obstacle_far(Dobs) {
-    if (0.7 * 1.2 <= Dobs && Dobs < 1.0) return (0.7 * 1.2 - Dobs) / -0.3 * 1.2;
+    if (0.7 * 2 <= Dobs && Dobs < 1.0) return (0.7 * 2 - Dobs) / -0.3 * 2;
     else if (Dobs >= 1) return 1;
     else return 0;
 }
@@ -92,7 +92,7 @@ function behavior_coefficient_bo_very_low(B) {
 }
 
 function behavior_coefficient_bo_low(B) {
-    if (0 <= B <= 0.5) return 1 - Math.abs(B - 0.2) / 0.25;
+    if (0 <= B <= 0.5) return 1 - Math.abs(B - 0.25) / 0.25;
     else return 0;
 }
 
