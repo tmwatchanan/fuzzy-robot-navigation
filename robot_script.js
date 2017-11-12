@@ -155,9 +155,6 @@ function createWaypoint(event) {
     if (!draw) {
         var X = event.clientX,
             Y = event.clientY - document.getElementById("top").offsetHeight - 20 + $(document).scrollTop();
-
-        console.log($(document).scrollTop());
-
         if (!isAnyBox) {
             isAnyBox = true;
         } else {
@@ -196,9 +193,6 @@ setInterval(function () {
         // Body.setAngle(Roomba, radToWaypoint);
 
         Body.setAngle(Roomba, Fangle);
-        // Body.setAngularVeolcity()
-
-        // console.log(obstacle[0].vertices[0].x);
 
         var force = p5.Vector.fromAngle(Roomba.angle)
         // force.mult(velocity);
@@ -237,7 +231,6 @@ function findNearestObstacle() {
             }
         }
     }
-    console.log(disNearestObstacle)
     radAvoidObstacle = (Math.atan2(nearest_y - Roomba.position.y, nearest_x - Roomba.position.x)) - Math.PI / 2;
 }
 
@@ -262,8 +255,4 @@ var find_beta = function () {
     firing_str_Bo();
     firing_str_Bw();
     firing_str_Bwd();
-
-    // console.log("angle = 23 x (" + B0 + " x " + Bw + ") = " + angle);
-    // console.log(Bt + " | " + Bo + " | " + Bw + " | " + Bwd)
-    // console.log(velocity + " | " + angle);
 }
