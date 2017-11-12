@@ -217,16 +217,14 @@ setInterval(function () {
 }, 100)
 
 function findNearestObstacle() {
-    var x, y,
-        maxX, maxY,
-        nearest_x, nearest_y;
+    var nearest_x, nearest_y;
     disNearestObstacle = 99999;
 
     for (var i = 0; i < obstacle.length; i++) {
-        x = obstacle[i].vertices[0].x;
-        y = obstacle[i].vertices[0].y;
-        maxX = obstacle[i].vertices[2].x;
-        maxY = obstacle[i].vertices[2].y;
+        var x = obstacle[i].vertices[0].x < obstacle[i].vertices[2].x ? obstacle[i].vertices[0].x : obstacle[i].vertices[2].x,
+            y = obstacle[i].vertices[0].y < obstacle[i].vertices[2].y ? obstacle[i].vertices[0].y : obstacle[i].vertices[2].y,
+            maxX = x == obstacle[i].vertices[2].x ? obstacle[i].vertices[0].x : obstacle[i].vertices[2].x,
+            maxY = y == obstacle[i].vertices[2].y ? obstacle[i].vertices[0].y : obstacle[i].vertices[2].y;
 
         for (var xi = x; xi <= maxX; xi += 5) {
             for (var yi = y; yi <= maxY; yi += 5) {
@@ -239,56 +237,8 @@ function findNearestObstacle() {
             }
         }
     }
-    // World.add(world, Bodies.circle(nearest_x, nearest_y, 1, {
-    //     isStatic: true
-    // }))
+    console.log(disNearestObstacle)
     radAvoidObstacle = (Math.atan2(nearest_y - Roomba.position.y, nearest_x - Roomba.position.x)) - Math.PI / 2;
-}
-
-function findnearestObstacle() {
-    var deltaX, deltaY,
-        x = 9999,
-        y = 9999,
-        maxX = 0,
-        maxY = 0;
-    disNearestObstacle = 99999;
-    let nearest_x = 0,
-        nearest_y = 0;
-    let nearest_i = -1;
-    for (var i = 0; i < obstacle.length; i++) {
-        x = 99999, y = 99999;
-        for (var j = 0; j < obstacle[i].vertices.length; j++) {
-            if (x > obstacle[i].vertices[j].x) x = obstacle[i].vertices[j].x;
-            if (y > obstacle[i].vertices[j].y) y = obstacle[i].vertices[j].y;
-            if (maxX < obstacle[i].vertices[j].x) maxX = obstacle[i].vertices[j].x;
-            if (maxY < obstacle[i].vertices[j].y) maxY = obstacle[i].vertices[j].y;
-
-            // console.log("obstacle", i, x, y, maxX, maxY)
-        }
-
-        for (var k = x; k <= maxX; k += 2) {
-            for (var l = y; l <= maxY; l += 2) {
-
-                deltaX = k - Roomba.position.x;
-                deltaY = l - Roomba.position.y;
-
-                var dis = Math.sqrt(Math.pow(deltaX, 2) + Math.pow(deltaY, 2));
-                // console.log("dis = " + dis);
-                if (dis < disNearestObstacle) {
-                    disNearestObstacle = dis;
-                    nearest_i = i;
-                    nearest_x = deltaX;
-                    nearest_y = deltaY;
-                    // console.log(px_cm(disNearestObstacle));
-                }
-            }
-        }
-    }
-    // console.log(nearest_x, nearest_y);
-    // console.log("nearest distance = " + disNearestObstacle);
-    radAvoidObstacle = (Math.atan2(nearest_y, nearest_x) + Math.PI);
-    // console.log("nearest_i = " + nearest_i);
-    console.log("obstacle " + obstacle[nearest_i].label + " X: " + nearest_x + " y: " + nearest_y + " -> distance:", disNearestObstacle);
 }
 
 function px_cm(px) {

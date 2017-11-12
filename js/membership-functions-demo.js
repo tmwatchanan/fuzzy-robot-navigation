@@ -12,7 +12,7 @@ setInterval(function () {
         Plotly.purge(bwd);
 
         var layout = {
-            width: 300,
+            width: 400,
             height: 200,
             showticklabels: false,
             ticks: '',
