@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2017.11.7)  12 NOV 2017 02:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2017.11.7)  12 NOV 2017 15:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -388,20 +388,7 @@ s
 \f@nch@O@orf=\skip71
 )
 (./Web-based Interactive Demo of Robot Navigation using Fuzzy Control - Instruc
-tion.aux
-
-LaTeX Warning: Label `latexcompanion' multiply defined.
-
-
-LaTeX Warning: Label `latexcompanion' multiply defined.
-
-
-LaTeX Warning: Label `latexcompanion' multiply defined.
-
-
-LaTeX Warning: Label `latexcompanion' multiply defined.
-
-)
+tion.aux)
 \openout1 = `"Web-based Interactive Demo of Robot Navigation using Fuzzy Contro
 l - Instruction.aux"'.
 
@@ -548,22 +535,7 @@ LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10.95> not available
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10.95> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 96.
 
-Underfull \hbox (badness 10000) in paragraph at lines 106--113
-\T1/ptm/m/n/10.95 (+20) This work aims to to web tech-nol-ogy.
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 106--113
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 106--113
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 106--113
+Underfull \hbox (badness 10000) in paragraph at lines 109--112
 
  []
 
@@ -577,66 +549,48 @@ Class scrartcl Warning: incompatible usage of \@ssect detected.
 (scrartcl)              from within a non compatible caller, that does not
 (scrartcl)              \scr@s@ct@@nn@m@ locally.
 (scrartcl)              This could result in several error messages on input li
-ne 115.
+ne 113.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 142.
-[2pdfTeX warning (ext4): destination with the same identifier (name{cite.latexc
-ompanion}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.142 \end{document}
-                    pdfTeX warning (ext4): destination with the same identifier
- (name{cite.latexcompanion}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.142 \end{document}
-                    pdfTeX warning (ext4): destination with the same identifier
- (name{cite.latexcompanion}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.142 \end{document}
-                    pdfTeX warning (ext4): destination with the same identifier
- (name{cite.latexcompanion}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.142 \end{document}
-                    ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 142.
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 116.
+(d:/texlive/2017/texmf-dist/tex/latex/psnfss/t1pcr.fd
+File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
+)
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `pcr' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 121.
+ [2]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 121.
 
 (./Web-based Interactive Demo of Robot Navigation using Fuzzy Control - Instruc
 tion.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 142.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 142.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 121.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 121.
 Package rerunfilecheck Info: File `"Web-based Interactive Demo of Robot Navigat
 ion using Fuzzy Control - Instruction".out' has not changed.
-(rerunfilecheck)             Checksum: B61F926217530F21225FDA5FD3FEF17B;89.
-
-
-LaTeX Warning: There were multiply-defined labels.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 142.
+(rerunfilecheck)             Checksum: 7CDA8A3D669FE1BD290DD1D380032484;135.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 121.
  ) 
 Here is how much of TeX's memory you used:
- 10475 strings out of 492985
- 168794 string characters out of 6136284
- 374747 words of memory out of 5000000
- 13820 multiletter control sequences out of 15000+600000
- 47154 words of font info for 94 fonts, out of 8000000 for 9000
+ 10523 strings out of 492985
+ 169723 string characters out of 6136284
+ 374706 words of memory out of 5000000
+ 13888 multiletter control sequences out of 15000+600000
+ 50035 words of font info for 89 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,10n,51p,8919b,350s stack positions out of 5000i,500n,10000p,200000b,80000s
 {d:/texlive/2017/texmf-dist/fonts/enc/dvips/base/8r.enc}<d:/texlive/2017/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><d:/texlive/2017/texmf-dist/fo
-nts/type1/urw/times/utmb8a.pfb><d:/texlive/2017/texmf-dist/fonts/type1/urw/time
-s/utmr8a.pfb><d:/texlive/2017/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+f-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><d:/texlive/2017/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmsy10.pfb><d:/texlive/2017/texmf-dist/fonts/type1/
+urw/courier/ucrr8a.pfb><d:/texlive/2017/texmf-dist/fonts/type1/urw/times/utmb8a
+.pfb><d:/texlive/2017/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><d:/texlive/2
+017/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
 Output written on "Web-based Interactive Demo of Robot Navigation using Fuzzy C
-ontrol - Instruction.pdf" (2 pages, 54974 bytes).
+ontrol - Instruction.pdf" (2 pages, 67740 bytes).
 PDF statistics:
- 49 PDF objects out of 1000 (max. 8388607)
- 40 compressed objects within 1 object stream
- 7 named destinations out of 1000 (max. 500000)
- 21009 words of extra memory for PDF output out of 24883 (max. 10000000)
+ 62 PDF objects out of 1000 (max. 8388607)
+ 51 compressed objects within 1 object stream
+ 8 named destinations out of 1000 (max. 500000)
+ 23065 words of extra memory for PDF output out of 24883 (max. 10000000)
 
