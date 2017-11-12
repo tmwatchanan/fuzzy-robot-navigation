@@ -32,18 +32,18 @@ function distance_to_waypoint_far(Dwpt) {
 
 //Distance to obstacle
 function distance_to_obstacle_near(Dobs) {
-    if (0 <= Dobs && Dobs <= 0.4 * 2) return 1;
-    else if (Dobs <= 0.7 * 2) return (0.7 * 2 - Dobs) / 0.3 * 2;
+    if (0 <= Dobs && Dobs <= 0.4) return 1;
+    else if (Dobs <= 0.7) return (0.7 - Dobs) / 0.3;
     else return 0;
 }
 
 function distance_to_obstacle_mid(Dobs) {
-    if (0.4 * 2 <= Dobs && Dobs <= 0.7 * 2) return 1 - Math.abs(Dobs - 0.7 * 2) / 0.3 * 2;
+    if (0.4 <= Dobs && Dobs <= 0.7) return 1 - Math.abs(Dobs - 0.7) / 0.3;
     else return 0;
 }
 
 function distance_to_obstacle_far(Dobs) {
-    if (0.7 * 2 <= Dobs && Dobs < 1.0) return (0.7 * 2 - Dobs) / -0.3 * 2;
+    if (0.7 <= Dobs && Dobs < 1.0) return (0.7 - Dobs) / -0.3;
     else if (Dobs >= 1) return 1;
     else return 0;
 }
