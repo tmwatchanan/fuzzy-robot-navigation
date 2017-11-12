@@ -17,6 +17,12 @@
   <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"> -->
   <!-- Custom styles for this template -->
   <link href="./css/sticky-footer-navbar.css" rel="stylesheet">
+
+    <style>
+      body > .container {
+        padding: 0px 15px 0;
+      }
+    </style>
 </head>
 
 <body>
@@ -67,9 +73,66 @@
   </div>
 
   <div class="container">
-    <p>5 inputs</p>
-    <p>4 outputs</p>
+    <p></p>
+    <div class="table-responsive" style="width: 45%; display: inline-block">
+    <table class="table">
+      <caption>4 Inputs</caption>
+      <tr>
+        <th>Input</th>
+        <th>Symbol</th>
+      </tr>
+      <tr>
+        <td>Distance from robot to the waypoint</td>
+        <td><img src="http://latex.codecogs.com/gif.latex?d_{wpt}" border="0" /></td>
+      </tr>
+      <tr>
+        <td>Distance from robot to the closest obstacle</td>
+        <td><img src="http://latex.codecogs.com/gif.latex?d_{obs}" border="0" /></td>
+      </tr>
+      <tr>
+        <td>Angle between robot and obstacle</td>
+        <td><img src="http://latex.codecogs.com/gif.latex?\delta_{obs}" border="0" /></td>
+      </tr>
+      <tr>
+        <td>Angle between waypoint and obstacle</td>
+        <td><img src="http://latex.codecogs.com/gif.latex?\delta_{wpt-obs}" border="0" /></td>
+      </tr>
+    </table>
+    </div>
+    
+    <div class="table-responsive" style="width: 45%; display: inline-block; float: right">
+    <table class="table">
+      <caption>4 Outputs</caption>
+      <tr>
+        <th>Output</th>
+        <th>Symbol</th>
+      </tr>
+      <tr>
+        <td>Behavior coefficient of FIS for <i>go_to_waypoint</i> behavior</td>
+        <td><img src="http://latex.codecogs.com/gif.latex?\beta_{wpt}" border="0" /></td>
+      </tr>
+      <tr>
+        <td>Behavior coefficient of FIS for <i>avoid_obstacle</i> behavior</td>
+        <td><img src="http://latex.codecogs.com/gif.latex?\beta_{o}" border="0" /></td>
+      </tr>
+      <tr>
+        <td>Behavior coefficient of FIS for <i>wall_follow</i> behavior</td>
+        <td><img src="http://latex.codecogs.com/gif.latex?\beta_{w}" border="0" /></td>
+      </tr>
+      <tr>
+        <td>Behavior coefficient of FIS for <i>wander</i> behavior</td>
+        <td><img src="http://latex.codecogs.com/gif.latex?\beta_{wd}" border="0" /></td>
+      </tr>
+    </table>
+    </div>
+    
+    <div class="well">
+      <h3>Notes</h3>
+      <p></p>
+    </div>
+
     <hr>
+
     <div style="text-align: center;">
       <img src="http://latex.codecogs.com/gif.latex?d_{wpt}" border="0" />
       <div id="dwpt" style="height:300px;"></div>
@@ -102,16 +165,6 @@
       <div id="b" style="height:300px;"></div>
     </div>
     <hr>
-    <div class="mt-3">
-      <p>test</p>
-    </div>
-    <br>
-    <p class="lead"> with
-      <code>padding-top: 60px;</code> on the
-      <code>body &gt; .container</code>.</p>
-    <p></p>
-  </div>
-
 
   <footer class="footer">
     <div class="container">
