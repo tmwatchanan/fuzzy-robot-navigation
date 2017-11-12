@@ -62,7 +62,7 @@ var option = {
         frictionAir: 0,
         inertia: Infinity,
         sprite: {
-            texture: './Roomba.png'
+            texture: './img/Roomba.png'
         }
     }
 }
