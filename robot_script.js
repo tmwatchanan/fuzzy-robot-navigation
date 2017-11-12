@@ -188,8 +188,8 @@ setInterval(function () {
 
         find_beta();
 
-        var Fx = (Bt * Math.cos(radToWaypoint) * px_cm(disWaypoint)) + (Bo * Math.cos(radAvoidObstacle)) + (Bw * Math.cos(radAvoidObstacle - Math.PI / 2)) + (Bwd * Math.cos(Roomba.angle)),
-            Fy = (Bt * Math.sin(radToWaypoint) * px_cm(disWaypoint)) + (Bo * Math.sin(radAvoidObstacle)) + (Bw * Math.sin(radAvoidObstacle - Math.PI / 2)) + (Bwd * Math.sin(Roomba.angle));
+        var Fx = (Bt * Math.cos(radToWaypoint) * px_cm(disWaypoint)) + (Bo * Math.cos(radAvoidObstacle) * 1 / px_cm(disNearestObstacle)) + (Bw * Math.cos(radAvoidObstacle - Math.PI / 2)) + (Bwd * Math.cos(Roomba.angle)),
+            Fy = (Bt * Math.sin(radToWaypoint) * px_cm(disWaypoint)) + (Bo * Math.sin(radAvoidObstacle) * 1 / px_cm(disNearestObstacle)) + (Bw * Math.sin(radAvoidObstacle - Math.PI / 2)) + (Bwd * Math.sin(Roomba.angle));
 
         velocity = Math.sqrt((Fx * Fx) + (Fy * Fy))
         var Fangle = Math.atan2(Fy, Fx);

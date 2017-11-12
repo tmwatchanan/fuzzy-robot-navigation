@@ -17,6 +17,9 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="./highlight.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="./js/membership-functions-demo.js"></script>
     <style>
         .tg td {
             padding: 0;
@@ -349,21 +352,42 @@
                     </table>
                 </div>
             </div>
-        </div>
-    </div>
+            <hr>
+            <div class="row">
+                <div class="col-sm-4" style="text-align: center;">
+                    <img src="http://latex.codecogs.com/gif.latex?\beta_{t}" border="0" />
+                    <div id="Bt" style="height: 200px;"></div>
+                </div>
+                <div class="col-sm-4" style="text-align: center;">
+                    <img src="http://latex.codecogs.com/gif.latex?\beta_{o}" border="0" />
+                    <div id="Bo" style="height: 200px;"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4" style="text-align: center;">
+                    <img src="http://latex.codecogs.com/gif.latex?\beta_{w}" border="0" />
+                    <div id="Bw" style="height: 200px;"></div>
+                </div>
+                <div class="col-sm-4" style="text-align: center;">
+                    <img src="http://latex.codecogs.com/gif.latex?\beta_{wd}" border="0" />
+                    <div id="Bwd" style="height: 200px;"></div>
+                </div>
+            </div>
 
-    <!-- Bootstrap core JavaScript
+        </div>
+
+        <!-- Bootstrap core JavaScript
     ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
-        crossorigin="anonymous"></script>
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-        crossorigin="anonymous"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="./js/ie10-viewport-bug-workaround.js"></script>
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+            crossorigin="anonymous"></script>
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+        <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+        <script src="./js/ie10-viewport-bug-workaround.js"></script>
 </body>
 
 </html>
